@@ -1,0 +1,74 @@
+<html>
+<script language="javascript">
+function check()
+{
+	if (f1.un.value==""){
+		
+		alert("Please enter username!")
+		f1.un.focus()
+		return false;
+	}
+	
+if (f1.pwd.value==""){
+		
+		alert("Please enter password!")
+		f1.pwd.focus()
+		return false;
+	}
+	
+if (f1.pwd.value!=f1.pwd2.value){
+	
+	alert("Passwords are not matching!")
+	f1.pwd.focus()
+	return false;
+}
+return true;
+	
+}
+</script>
+
+<body bgcolor="lightblue">
+<h1>Registration</h1>
+<form name=f1 action="register.jsp"
+  onsubmit="return check()">
+
+<table cellpadding=5>
+<tr>
+<td>Username<td>
+<input type=text name=un size=20>
+</tr>
+
+<tr>
+<td>Password<td>
+<input type=password name=pwd size=20>
+</tr>
+
+<tr>
+<td>Confirm Password<td>
+<input type=password name=pwd2 size=20>
+</tr>
+
+<tr>
+<td>Occupation
+<td><select name=ocup>
+<option value=e>Employee
+<option value=s>Student
+<option value=o>Others
+</select>
+</tr>
+<tr><td>Age </td>
+<td>
+<input type=radio name=age value=1> Less Than 20
+<input type=radio name=age value=2> 20 TO 40
+<input type=radio name=age value=3> More than 40
+</tr>
+
+<tr>
+<td colspan=2> <input type=checkbox name=n1 value=y> Subscriber To News Letter
+</tr>
+</table>  
+<p>
+<input type=submit value=Submit> <input type=reset value=Clear>
+</form>
+</body>
+</html>
