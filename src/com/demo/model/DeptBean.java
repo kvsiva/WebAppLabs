@@ -28,7 +28,7 @@ public class DeptBean {
 	//Insert new dept
 	public void addDept(){
 		try{
-		Class.forName("oracle.jdbc.driver.OracleDriver");
+		Class.forName("com.mysql.jdbc.Driver");
 		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/TEST","root","tiger");
 		PreparedStatement ps=con.prepareStatement("insert into dept values(?,?,?)");
 		ps.setInt(1, deptno);
