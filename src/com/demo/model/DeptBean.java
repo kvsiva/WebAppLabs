@@ -1,4 +1,4 @@
-package com.demo.servlet;
+package com.demo.model;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -29,7 +29,7 @@ public class DeptBean {
 	public void addDept(){
 		try{
 		Class.forName("oracle.jdbc.driver.OracleDriver");
-		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@1521:xe","SYSTEM","tiger");
+		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/TEST","root","tiger");
 		PreparedStatement ps=con.prepareStatement("insert into dept values(?,?,?)");
 		ps.setInt(1, deptno);
 		ps.setString(2, deptname);
