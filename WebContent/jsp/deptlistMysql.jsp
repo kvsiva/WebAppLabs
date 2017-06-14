@@ -26,6 +26,7 @@ ResultSet rs=st.executeQuery("select * from dept");
 <th>Location
 </tr>
 
+
 <%
 while (rs.next()){
 %>
